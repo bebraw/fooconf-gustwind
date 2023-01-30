@@ -1,0 +1,23 @@
+{
+  "type": "div",
+  "class": "flex flex-col gap-2",
+  "children": [
+    {
+      "type": "div",
+      "children": [
+        {
+          "utility": "concat",
+          "parameters": ["Count", " ", {
+            "utility": "get",
+            "parameters": ["props", "target"]
+          }]
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "class": "rounded bg-blue-200 shrink p-2 w-fit",
+      "children": "Add one"
+    }
+  ]
+}
