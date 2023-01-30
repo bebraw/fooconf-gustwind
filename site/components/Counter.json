@@ -7,17 +7,35 @@
       "children": [
         {
           "utility": "concat",
-          "parameters": ["Count", " ", {
-            "utility": "get",
-            "parameters": ["props", "target"]
-          }]
+          "parameters": [
+            "Count",
+            " ",
+            {
+              "utility": "get",
+              "parameters": ["props", "target"]
+            },
+            ":",
+            " "
+          ]
+        },
+        {
+          "type": "span",
+          "attributes": {
+            "x": "state"
+          }
         }
       ]
     },
     {
       "type": "button",
       "class": "rounded bg-blue-200 shrink p-2 w-fit",
-      "children": "Add one"
+      "children": "Add one",
+      "attributes": {
+        "onclick": "setState(x => x + 1)"
+      }
     }
-  ]
+  ],
+  "attributes": {
+    "x-state": "0"
+  }
 }
